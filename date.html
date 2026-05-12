@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>time</title>
+  </head>
+  <body>
+    <script>
+      let date = new Date();
+      let hour = date.getHours();
+      //   console.log(date, hour);
+      if (hour >= 6 && hour < 12) {
+        console.log("Good morning");
+      } else if (hour >= 13 && hour < 17) {
+        console.log("Good Afternoon");
+      } else {
+        console.log("Good night");
+      }
+    </script>
+  </body>
+</html>

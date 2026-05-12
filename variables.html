@@ -1,0 +1,70 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Variables</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body class="body">
+    <p>Cart CartQuantity</p>
+    <button onclick="console.log(`Cart CartQuantity: ${CartQuantity}`)">
+      Show CartQuantity
+    </button>
+    <button
+      onclick="
+        ((CartQuantity += 1), console.log(`Cart CartQuantity: ${CartQuantity}`))
+      "
+    >
+      Add to cart
+    </button>
+    <button
+      onclick="
+        ((CartQuantity += 2), console.log(`Cart quantity: ${CartQuantity}`))
+      "
+    >
+      +2
+    </button>
+    <button
+      onclick="
+        ((CartQuantity += 3), console.log(`Cart quantity: ${CartQuantity}`))
+      "
+    >
+      +3
+    </button>
+    <button
+      onclick="
+        ((CartQuantity = 0), console.log(`Cart quantity: ${CartQuantity}`))
+      "
+    >
+      Reset cart
+    </button>
+    <script>
+      //   let variable1 = 3;
+      //   console.log(variable1);
+
+      //   let calcualtion = 2 + 2;
+      //   console.log(calcualtion);
+      //   console.log(calcualtion + 2);
+
+      //   let result = calcualtion + 4;
+      //   console.log(result);
+      //   let message = "hello";
+      //   console.log(message);
+      //   variable1 = 5;
+      //   console.log(variable1);
+
+      //   variable1 = 10;
+      //   console.log(variable1);
+      //   variable1 += 1;
+      //   console.log(variable1);
+
+      let CartQuantity = 0;
+      const varibale2 = 3;
+      var variable3 = 5;
+      console.log(typeof varibale2);
+    </script>
+  </body>
+</html>

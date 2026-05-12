@@ -1,0 +1,71 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Html css js</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <style>
+    /*css comment*/
+    .body {
+      background-color: coral;
+    }
+
+    h1 {
+      color: white;
+      font-weight: 1000;
+      font-size: 100px;
+    }
+    .red-button {
+      background-color: red;
+      padding-right: 20px;
+      padding-left: 20px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      border: none;
+      border-radius: 5px;
+      color: white;
+      font-weight: bold;
+      text-transform: capitalize;
+    }
+    .red-button:hover {
+      box-shadow: inset;
+      background-color: rgb(231, 91, 91);
+      color: black;
+      transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+    .yellow-button {
+      background-color: yellowgreen;
+      padding-right: 20px;
+      padding-left: 20px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      border: none;
+      border-radius: 5px;
+      color: white;
+      font-weight: bold;
+      text-transform: capitalize;
+    }
+  </style>
+  <body class="body">
+    <!---html comment---->
+    <h1>Selamew</h1>
+    <button onclick="alert('red zone')" title="Good job" class="red-button">
+      hello
+    </button>
+    <p>paragraph 1</p>
+    <button title="Good job" class="yellow-button">hello</button>
+    <p>paragraph 2</p>
+    <button>click</button>
+    <script>
+      //This creates a popup
+      //   alert("hello");
+      /*mutli line comment*/
+      console.log(2 + 2);
+      console.log("Some" + " text");
+    </script>
+  </body>
+</html>
