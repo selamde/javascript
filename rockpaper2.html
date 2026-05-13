@@ -10,18 +10,38 @@
     <button onclick="console.log(playGame('rock'))">Rock</button>
     <button onclick="playGame('paper')">Paper</button>
     <button onclick="playGame('scissor')">Scissor</button>
+    <button
+      onclick="
+        score.wins = 0;
+        score.losses = 0;
+        score.ties = 0;
+        localStorage.removeItem('score');
+      "
+    >
+      Reset
+    </button>
   </body>
   <script>
     /*inorder not to set the score to 0 each time when the fucntion is called so we put it outside the function*/
-    const score = {
-      wins: 0,
-      losses: 0,
-      ties: 0,
-    };
+    // const score = {
+    //   wins: 0,
+    //   losses: 0,
+    //   ties: 0,
+    // };
+    //conver the json to object
+    const score = JSON.parse(localStorage.getItem("score"));
+    console.log(JSON.parse(localStorage.getItem("score")));
+    if (!score) {
+      score = {
+        wins: 0,
+        losses: 0,
+        ties: 0,
+      };
+    }
 
     function playGame(playerMove) {
       const randomNumber = Math.random();
-      console.log(randomNumber);
+      //   console.log(randomNumber);
       let computerMove = "";
       let result = "";
 
@@ -71,9 +91,10 @@
         score.ties += 1;
       }
 
+      localStorage.setItem("score", JSON.stringify(score));
       alert(
         `You picked ${playerMove}. The computer picked ${computerMove}. ${result}
-        Wins= ${score.wins}, Losses= ${score.losses} and Ties= ${score.ties}
+Wins: ${score.wins}, Losses: ${score.losses} and Ties: ${score.ties}
         `,
       );
       return 5;
