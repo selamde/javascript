@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dom project2</title>
+  </head>
+  <body>
+    <input type="text" onkeyup="displayText(this.value)" />
+    <p class="display-key"></p>
+
+    <script>
+      function displayText(value) {
+        // console.log(key);
+        document.querySelector(".display-key").innerHTML = value;
+      }
+    </script>
+  </body>
+</html>

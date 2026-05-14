@@ -4,8 +4,42 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dom project</title>
+    <style>
+      body {
+        padding: 50px;
+        font-family:
+          "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+      }
+      .sub-btn {
+        background-color: red;
+        color: white;
+        border: none;
+        font-size: large;
+        font-weight: bold;
+        padding-right: 15px;
+        padding-top: 10px;
+        padding-left: 15px;
+        padding-bottom: 10px;
+        border-radius: 50px;
+        cursor: pointer;
+        margin-bottom: 30px;
+      }
+      .is-subscribed {
+        background-color: rgb(201, 193, 193);
+        color: black;
+      }
+      .cost-input {
+        font-size: 15px;
+        padding: 10px;
+        outline: none;
+      }
+      .cal-btn {
+        background-color: rgb(52, 139, 238);
+        border: none;
+        padding: 10px;
+      }
+    </style>
   </head>
-  <style></style>
   <body>
     <p>YouTube Subscribe button</p>
     <button class="sub-btn" onclick="subscribeFunc()">Subscribe</button>
@@ -13,24 +47,60 @@
     <br />
     <p>Rock Paper Scissors</p>
 
-    <a href="#">click here</a>
+    <a href="rockpapers4.html">click here</a>
     <br />
     <br />
     <p>Amazon Shipping calculator</p>
-    <p>Order under $40 = +$10</p>
-    <p>Order over $40 = FREE shipping</p>
+    <p>Order under ETB 40 = + ETB 10</p>
+    <p>Order over ETB 40 = FREE shipping</p>
 
-    <input type="text" placeholder="Cost of order" />
-    <button>Calculate</button>
+    <input
+      placeholder="Cost of order"
+      class="js-cost-input cost-input"
+      onkeydown="handleCostKeyDown(event)"
+    />
+    <button onclick="calculateTotal()" class="cal-btn">Calculate</button>
+    <p class="js-total-cost"></p>
 
     <script>
+      //conver a value to string
+      String(24);
+      console.log("25" - 5);
+
+      // window.document;
+      // window.console.log("window");
+      // window.alert();
+
+      function handleCostKeyDown(event) {
+        if (event.key === "Enter") {
+          calculateTotal();
+        }
+      }
+      function calculateTotal() {
+        const inputElement = document.querySelector(".js-cost-input");
+
+        let cost = Number(inputElement.value);
+        console.log(cost);
+
+        if (inputElement.value === "") {
+          document.querySelector(".js-total-cost").innerHTML =
+            "Please Enter an amount";
+          return;
+        }
+        if (cost < 40) {
+          cost = cost + 10;
+        }
+        document.querySelector(".js-total-cost").innerHTML = `ETB ${cost}`;
+      }
       function subscribeFunc() {
         const subButtonElement = document.querySelector(".sub-btn");
 
         if (subButtonElement.innerText === "Subscribe") {
           subButtonElement.innerHTML = "Subscribed";
+          subButtonElement.classList.add("is-subscribed");
         } else {
           subButtonElement.innerHTML = "Subscribe";
+          subButtonElement.classList.remove("is-subscribed");
         }
       }
     </script>
