@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array and loops</title>
+  </head>
+  <body class="">
+    <script>
+      // const myArray = [10, 20, 30, 40, 50];
+      // console.log(myArray);
+      // console.log(myArray[0]);
+      // myArray[0] = 99;
+      // console.log(myArray);
+      // [1, "cat", true, { name: "sock" }, [1, 2, 3]];
+      // console.log(Array.isArray(myArray));
+      // console.log(myArray.length);
+      // myArray.push(100);
+      // console.log(myArray);
+      // myArray.splice(0, 1);
+      // console.log(myArray);
+
+      // let i = 1;
+      // while (i <= 5) {
+      //   console.log(i);
+      //   i++;
+      // }
+      // for (let i = 0; i < 5; i++) {
+      //   console.log(i);
+      // }
+
+      // const todolist = ["make dinner", "wash dishes", "eat food"];
+      // for (let i = 0; i < todolist.length; i++) {
+      //   console.log(todolist[i]);
+      // }
+      const nums = [10, 20, 30];
+      let total = 0;
+      for (let i = 0; i < nums.length; i++) {
+        total += nums[i];
+      }
+      console.log(total);
+
+      const numDouble = [];
+
+      for (let i = 0; i < nums.length; i++) {
+        numDouble[i] = nums[i] * 2;
+      }
+      console.log(numDouble);
+    </script>
+  </body>
+</html>
